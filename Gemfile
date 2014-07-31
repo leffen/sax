@@ -6,6 +6,7 @@ gem 'thin'
 group :development do
   gem 'shotgun'
   gem 'guard'
+  gem 'rb-fsevent'
   gem 'guard-rspec'
 end
 
