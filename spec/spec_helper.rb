@@ -1,6 +1,6 @@
 require 'rspec'
 require 'rack/test'
-require 'sinatra'
+require_relative '../app'
 
 RSpec.configure do |conf|
   conf.include Rack::Test::Methods
