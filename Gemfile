@@ -5,4 +5,11 @@ gem 'thin'
 
 group :development do
   gem 'shotgun'
+  gem 'guard'
+  gem 'guard-rspec'
+end
+
+group :development, :test do
+	gem 'rspec'
+	gem 'rack-test'
 end
