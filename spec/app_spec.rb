@@ -1,6 +1,7 @@
 ENV['RACK_ENV'] = 'test'
 
 require_relative 'spec_helper'
+require 'json'
 
 describe 'SAX' do
   include Rack::Test::Methods
@@ -11,6 +12,8 @@ describe 'SAX' do
 
   it "gets data" do
     get '/api/report/1'
-    expect(last_response).to be_ok 
+    expect(last_response).to be_ok
+    data = JSON.parse(last_response.body)
+    expect(data.count).to eq(1263)
   end
 end
