@@ -12,8 +12,31 @@
 
 
 <div class="container-fluid" ng-controller="ClipController">
- <h1>{{report_1_data.length}}</h1>
 
+ <h1>{{report_1_data.values.length}}</h1>
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+          <i class="fa fa-bar-chart-o fa-fw"></i> {{title}}
+      </div>
+
+      <div class="panel-body" >
+          <nvd3-line-chart
+                  data="report_1_data"
+                  y="data_y()"
+                  x="data_x()"
+                  id="report_1_graph"
+                  showXAxis="true"
+                  showYAxis="true"
+                  tooltips="true"
+                  xAxisTickFormat="xAxisTickFormatFunction()"
+                  yAxisTickFormat="yAxisTickFormatFunction()"
+                  class="chart"
+                  >
+              <svg></svg>
+          </nvd3-line-chart>
+      </div>
+  </div>
 
 
 </div>
